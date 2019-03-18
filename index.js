@@ -1,9 +1,9 @@
 function dwarfRollCall(dwarves) {
   var arr = [];
-  for (let i = 0; i < dwarves.length; i++) {
+  for (let i = dwarves.length / 2; i < dwarves.length; i++) {
     arr.push(`${i+1}. ${dwarves[i]} `);
   }
-  return arr.join(''); // separator is an empty string, all elements are joined                       without any characters in between them.
+  return arr.join('');  //empty string between elements            
 }
 
 function summonCaptainPlanet(planeteerCalls) {
@@ -25,14 +25,31 @@ function longPlaneteerCalls(words) {
     }
 }
 
+var foods = ['apple', 'cheddar', 'camembert', 'ham']
+
 function findTheCheese (foods) {
   var cheeses = ["cheddar", "gouda", "camembert"];
   for (let i = 0; i < foods.length; i++) {
     if (cheeses.includes(foods[i])) {
       return foods[i];
     }
-    if (i == foods.length - 1) {
-      return 'no cheese!';
-    }
   }
+   return 'no cheese!';
+}
+
+
+function wordsWithB (words) {
+  var arr = [];
+  for (let i = 0; i < words.length; i++) {
+  //determine if words start with begin
+    if (words[i].toLowerCase().startsWith('b')) {
+      arr.push(words[i]);
+  }
+  return arr;
+
+  //return array containing words that begin with B
+  //Sally and james - empty
+  //Sally, bob, billy and james - bob and billy
+  // Sally, bob, and james - bob 
+}
 }
